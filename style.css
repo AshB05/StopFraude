@@ -1,0 +1,189 @@
+@font-face {
+    font-family: 'TipoGrafTITULO';
+    src: url('/FuentesStopFraude/TypoGraphica_demo.otf');
+    font-size: bold;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'TipoGrafTexto';
+    src: url('/FuentesStopFraude/Typo_Round_Regular_Demo.otf');
+    font-size: bold;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'TipoGrafparrafo';
+    src: url('/FuentesStopFraude/Louis\ George\ Cafe.ttf');
+    font-size: bold;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'TipoGraftitulo2';
+    src: url('/FuentesStopFraude/Typo_Round_Bold_Demo.otf');
+    font-size: bold;
+    font-weight: bold;
+}
+
+body {
+background: linear-gradient(to right,
+    #37146D 20%,
+    #30125F 31%,
+    #260E4C 40%,
+    #220C44 64%,
+    #180A36 79%,
+    #010102 100%
+);
+color: white;
+margin: 0;
+text-align: center;
+padding: 0;
+font-family: 'TipoGrafTITULO';
+font-weight: bold;
+}
+
+    .barra-superior {
+    width: 100%;
+    height: 60px; /* ajustar la altura */
+    background-color: #CAC4D0;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    }
+
+    .Contenido_titulo {
+    font-weight: bold;
+    font-size: 200%;
+    color: #30125F;
+    }
+
+    .mensaje_inicio{
+    font-family: 'TipoGrafTexto';
+    font-size: 300%;
+    font-weight: bold;
+    margin-top: 50px;
+    }
+
+    .Eslogan{
+    font-family: 'TipoGrafparrafo';
+    font-size: 190%;
+    font-weight: bold;
+    margin-top: 50px;
+    }
+
+.cuadro {
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 90%;             /* ocupa el 90% del ancho del body */
+    max-width: 1200px;      /* opcional: no se pasa de cierto tamaño */
+    margin: 40px auto;      /* centrado horizontal */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+}
+
+.izquierda {
+    background: #e0d0e0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #30125F;
+}
+.Boton {
+    background-color: #30125F;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'TipoGrafTexto';
+    font-size: 1.2rem;
+}
+.Boton:hover {
+    background-color: #663a9b;
+}
+
+.derecha {
+    background: #e0d0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Para que el contenido comience desde arriba */
+    align-items: center;
+    text-align: center;
+    position: relative; /* Para posicionar elementos internos */
+    color: #000000;
+    font-family: "TipoGraftitulo2";
+}
+
+.nivel {
+    font-size: 1.2rem;
+    align-self: flex-start;
+    margin: 10px 0;
+    color: #000000;
+    font-family: "TipoGrafTexto";
+}
+
+.bajo {
+    color: green;
+}
+.ProbFraude{
+    font-size: 1.2rem;
+    align-self: flex-start;
+    margin: 10px 0;
+    color: #000000;
+    font-family: "TipoGrafTexto";
+}
+.porcentaje {
+    font-size: 1.2rem;
+    align-self: flex-start;
+    margin: 10px 0;
+    color: #750101;
+    font-family: "TipoGrafTexto";
+}
+
+.Motivos{
+    font-size: 1.2rem;
+    align-self: flex-start;
+    margin: 10px 0;
+    color: #000000;
+    font-family: "TipoGrafTexto";
+}
+
+.class{
+    font-size: 1.2rem;
+    align-self: flex-start;
+    margin: 10px 0;
+    color: #000000;
+    font-family: "TipoGrafTexto";
+}
+
+.Recomendacion{
+    font-size: 1.2rem;
+    align-self: flex-start;
+    margin: 10px 0;
+    color: #000000;
+    font-family: "TipoGrafTexto";
+}
+
+.DescripMotivos{
+    font-size: 1.2rem;
+    align-self: flex-start;
+    margin: 10px 0;
+    color: #000000;
+    font-family: "TipoGrafTexto";
+}
