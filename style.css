@@ -35,7 +35,7 @@ background: linear-gradient(to right,
     #180A36 79%,
     #010102 100%
 );
-color: white;
+color: rgb(236, 0, 0);
 margin: 0;
 text-align: center;
 padding: 0;
@@ -46,7 +46,7 @@ font-weight: bold;
     .barra-superior {
     width: 100%;
     height: 60px; /* ajustar la altura */
-    background-color: #CAC4D0;
+    background-color: #c4d0cb;
     display: flex;
     align-items: center;
     padding: 0 20px;
