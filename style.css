@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'TipoGrafTITULO';
-    src: url('/FuentesStopFraude/TypoGraphica_demo.otf');
+    src: url('/FuentesStopFraude/Votrag.ttf');
     font-size: bold;
     font-weight: bold;
 }
@@ -21,43 +21,73 @@
 
 @font-face {
     font-family: 'TipoGraftitulo2';
-    src: url('/FuentesStopFraude/Typo_Round_Bold_Demo.otf');
+    src: url('/FuentesStopFraude/Louis\ George\ Cafe.ttf');
     font-size: bold;
     font-weight: bold;
 }
 
 body {
 background: linear-gradient(to right,
-    #37146D 20%,
-    #30125F 31%,
-    #260E4C 40%,
-    #220C44 64%,
-    #180A36 79%,
-    #010102 100%
-);
-color: white;
-margin: 0;
-text-align: center;
-padding: 0;
-font-family: 'TipoGrafTITULO';
-font-weight: bold;
+        #37146D 20%,
+        #30125F 31%,
+        #260E4C 40%,
+        #220C44 64%,
+        #180A36 79%,
+        #010102 100%
+    );
+    color: white;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+    font-family: 'TipoGrafTITULO';
+    font-weight: bold;
 }
 
     .barra-superior {
-    width: 100%;
-    height: 60px; /* ajustar la altura */
-    background-color: #c4d0c8;
-    display: flex;
+    height: 80px; /* más alto */
+    padding: 0 40px; /* más separación horizontal */
     align-items: center;
-    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #a892d6;
     box-sizing: border-box;
-    }
+}
 
-    .Contenido_titulo {
+
+.rectangulo-stopfraude {
+    background-color: #2e014b;
+    color: white;
+    padding: 1px 3px;
+    border-radius: 8px;
+    font-family: 'TipoGrafTITULO';
+    font-size: 50px;
     font-weight: bold;
-    font-size: 200%;
-    color: #30125F;
-    }
+    letter-spacing: 1px;
+}
+
+
+.texto-estadistica {
+    background-color: transparent;      /* Sin fondo inicialmente */
+    color: white;                       /* Texto visible */
+    padding: 1px 3px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'TipoGrafTITULO';
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;                    /* Mano al pasar encima */
+    transition: all 0.3s ease-in-out;   /* Suave animación */
+}
+
+
+.texto-estadistica:hover {
+    background-color: #2e014b;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    color: white; /* Por si algún color de fondo claro aparece */
+}
+
 
     .mensaje_inicio{
     font-family: 'TipoGrafTexto';
@@ -93,7 +123,9 @@ font-weight: bold;
     align-items: center;
     padding: 20px;
     text-align: center;
-    border: 1px solid #30125F;
+}
+.izquierda, .derecha {
+    border: 2px solid #a892d6;
 }
 .Boton {
     background-color: #30125F;
@@ -104,9 +136,13 @@ font-weight: bold;
     cursor: pointer;
     font-family: 'TipoGrafTexto';
     font-size: 1.2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
 }
 .Boton:hover {
     background-color: #663a9b;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    color: white; /* Por si algún color de fondo claro aparece */
 }
 
 .derecha {
@@ -128,6 +164,7 @@ font-weight: bold;
     position: relative; /* Para posicionar elementos internos */
     color: #000000;
     font-family: "TipoGraftitulo2";
+    font-weight: bold;
 }
 
 .nivel {
@@ -135,7 +172,7 @@ font-weight: bold;
     align-self: flex-start;
     margin: 10px 0;
     color: #000000;
-    font-family: "TipoGrafTexto";
+    font-family: "TipoGraftitulo2";
 }
 
 .bajo {
@@ -146,14 +183,14 @@ font-weight: bold;
     align-self: flex-start;
     margin: 10px 0;
     color: #000000;
-    font-family: "TipoGrafTexto";
+    font-family: "TipoGraftitulo2";
 }
 .porcentaje {
     font-size: 1.2rem;
     align-self: flex-start;
     margin: 10px 0;
     color: #750101;
-    font-family: "TipoGrafTexto";
+    font-family: "TipoGraftitulo2";
 }
 
 .Motivos{
@@ -161,7 +198,7 @@ font-weight: bold;
     align-self: flex-start;
     margin: 10px 0;
     color: #000000;
-    font-family: "TipoGrafTexto";
+    font-family: "TipoGraftitulo2";
 }
 
 .class{
@@ -169,7 +206,7 @@ font-weight: bold;
     align-self: flex-start;
     margin: 10px 0;
     color: #000000;
-    font-family: "TipoGrafTexto";
+    font-family: "TipoGraftitulo2";
 }
 
 .Recomendacion{
@@ -177,7 +214,7 @@ font-weight: bold;
     align-self: flex-start;
     margin: 10px 0;
     color: #000000;
-    font-family: "TipoGrafTexto";
+    font-family: "TipoGraftitulo2";
 }
 
 .DescripMotivos{
@@ -185,5 +222,5 @@ font-weight: bold;
     align-self: flex-start;
     margin: 10px 0;
     color: #000000;
-    font-family: "TipoGrafTexto";
+    font-family: "TipoGraftitulo2";
 }
