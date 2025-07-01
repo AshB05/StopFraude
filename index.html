@@ -35,14 +35,30 @@
 </div>
 
     
-<div class="derecha">
+<div class="derecha" contenteditable="false">
     <h2 class="titulo">Resultado del análisis</h2>
-    <div class="nivel">Nivel de riesgo: <span class="bajo">Bajo</span></div>
-    <div class="ProbFraude">Probabilidad de fraude: <span class= "porcentaje">90%</span></div>
-    <div class="Motivos">Motivos: <span class="DescripMotivos">Evitar compartir información personal</span></div>
-    <div class="Recomendacion">Recomendación: <span class="DescripMotivos">No proporciones datos sensibles</span></div>
+
+    <div class="nivel">
+        <div class="texto-riesgo">Nivel de riesgo:</div>
+        <div class="resultado-riesgo" id="resultado-riesgo"></div>
+    </div>
+    <div class="ProbFraude">
+        <div class="texto-probabilidad">Probabilidad de fraude:</div>
+        <div class="resultado-probabilidad" id="resultado-probabilidad"></div>
+    </div>
+
+    <div class="Motivos">
+        <div class="texto-motivos">Motivos del análisis:</div>
+        <div class="resultado-motivos" id="resultado-motivos"></div>
+    </div>
+
+    <div class="Recomendacion">
+        <div class="texto-recomendacion">Recomendaciones:</div>
+        <div class="resultado-recomendacion" id="resultado-recomendacion"></div>
     </div>
 
 </div>
+
+
 </body>
 </html>

@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from openai import OpenAI
 import os
 from fastapi.middleware.cors import CORSMiddleware
-from dotenv import load_dotenv 
+from dotenv import load_dotenv
 
 load_dotenv()
 

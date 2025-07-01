@@ -168,84 +168,108 @@ background: linear-gradient(to right,
 }
 
 .nivel {
-    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
     align-self: flex-start;
+    justify-content: center;
+    gap: 15px;
     margin: 10px 0;
-    color: #000000;
+    font-size: 1.2rem;
     font-family: "TipoGraftitulo2";
+    color: #000000;
 }
 
-.bajo {
-    color: green;
+.texto-riesgo, .texto-probabilidad,
+.texto-motivos, .texto-recomendacion {
+    white-space: nowrap;
 }
-.ProbFraude{
-    font-size: 1.2rem;
-    align-self: flex-start;
-    margin: 10px 0;
+
+.resultado-riesgo, .resultado-probabilidad {
+    width: 100px;
+    height: 50px;
+    background-color: #25bec9;
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 10px;
     color: #000000;
-    font-family: "TipoGraftitulo2";
+    overflow-y: auto;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
 }
-.porcentaje {
-    font-size: 1.2rem;
+
+.resultado-motivos,
+.resultado-recomendacion {
+    width: 280px;
+    height: 100px;
+    background-color: #25bec9;
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 10px;
+    color: #000000;
+    overflow-y: auto;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.ProbFraude{
+    display: flex;
+    flex-direction: row;
     align-self: flex-start;
+    justify-content: center;
+    gap: 15px;
     margin: 10px 0;
-    color: #750101;
+    font-size: 1.2rem;
     font-family: "TipoGraftitulo2";
+    color: #000000;
 }
+
 
 .Motivos{
-    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
     align-self: flex-start;
+    justify-content: center;
+    gap: 15px;
     margin: 10px 0;
-    color: #000000;
+    font-size: 1.2rem;
     font-family: "TipoGraftitulo2";
+    color: #000000;
 }
 
-.class{
-    font-size: 1.2rem;
-    align-self: flex-start;
-    margin: 10px 0;
-    color: #000000;
-    font-family: "TipoGraftitulo2";
-}
 
 .Recomendacion{
-    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
     align-self: flex-start;
+    justify-content: center;
+    gap: 15px;
     margin: 10px 0;
-    color: #000000;
-    font-family: "TipoGraftitulo2";
-}
-
-.DescripMotivos{
     font-size: 1.2rem;
-    align-self: flex-start;
-    margin: 10px 0;
-    color: #000000;
     font-family: "TipoGraftitulo2";
+    color: #000000;
 }
 
 
 
-.parent {
+
+
+.Cuadro2 {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     gap: 8px;
 }
     
-.div1 {
+.NumMensajes {
     grid-column: span 2 / span 2;
     grid-row: span 3 / span 3;
 }
 
-.div2 {
+.Porcentaje {
     grid-column: span 2 / span 2;
     grid-row: span 3 / span 3;
     grid-column-start: 4;
 }
 
-.div3 {
+.NumPalaDetect {
     grid-column: span 5 / span 5;
     grid-row: span 2 / span 2;
     grid-row-start: 4;
