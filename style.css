@@ -187,7 +187,7 @@ background: linear-gradient(to right,
 .resultado-riesgo, .resultado-probabilidad {
     width: 100px;
     height: 50px;
-    background-color: #25bec9;
+    background-color: #e0d0e0;
     border: 1px solid #999;
     border-radius: 5px;
     padding: 10px;
@@ -200,7 +200,7 @@ background: linear-gradient(to right,
 .resultado-recomendacion {
     width: 280px;
     height: 100px;
-    background-color: #25bec9;
+    background-color: #e0d0e0;
     border: 1px solid #999;
     border-radius: 5px;
     padding: 10px;
@@ -247,7 +247,57 @@ background: linear-gradient(to right,
     color: #000000;
 }
 
+.CuadroCalificacion {
+    background: #e0d0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 60%;
+    max-width: 1200px;
+    margin: 40px auto;
+    box-sizing: border-box;
+}
 
+.titulo-Calificacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Para que el contenido comience desde arriba */
+    align-items: center;
+    text-align: center;
+    position: relative; /* Para posicionar elementos internos */
+    color: #000000;
+    font-family: "TipoGraftitulo2";
+    font-weight: bold;
+}
+.Primera-pregunta, .Segunda-pregunta , .Tercera-pregunta {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-family: "TipoGraftitulo2";
+    color: #000000;
+}
+
+
+    .star-rating {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    font-size: 2em;
+    }
+    .star-rating input {
+    display: none;
+    }
+    .star-rating label {
+    color: #ccc;
+    cursor: pointer;
+    }
+    .star-rating input:checked ~ label,
+    .star-rating label:hover,
+    .star-rating label:hover ~ label {
+    color: gold;
+    }
 
 
 

@@ -36,29 +36,111 @@
 
     
 <div class="derecha" contenteditable="false">
-    <h2 class="titulo">Resultado del análisis</h2>
+            <h2 class="titulo">Resultado del análisis</h2>
 
-    <div class="nivel">
-        <div class="texto-riesgo">Nivel de riesgo:</div>
-        <div class="resultado-riesgo" id="resultado-riesgo"></div>
-    </div>
-    <div class="ProbFraude">
-        <div class="texto-probabilidad">Probabilidad de fraude:</div>
-        <div class="resultado-probabilidad" id="resultado-probabilidad"></div>
+            <!-- Textarea for risk level result -->
+            <div class="nivel">
+                <div class="texto-riesgo">Nivel de riesgo:</div>
+                <textarea class="resultado-riesgo" id="resultado-riesgo" readonly></textarea>
+            </div>
+            <!-- Textarea for fraud probability result -->
+            <div class="ProbFraude">
+                <div class="texto-probabilidad">Probabilidad de fraude:</div>
+                <textarea class="resultado-probabilidad" id="resultado-probabilidad" readonly></textarea>
+            </div>
+
+            <div class="Motivos">
+                <div class="texto-motivos">Motivos del análisis:</div>
+                <textarea class="resultado-motivos" id="resultado-motivos" readonly></textarea>
+            </div>
+
+            <div class="Recomendacion">
+                <div class="texto-recomendacion">Recomendaciones:</div>
+                <textarea class="resultado-recomendacion" id="resultado-recomendacion" readonly></textarea>
+            </div>
+        </div>
     </div>
 
-    <div class="Motivos">
-        <div class="texto-motivos">Motivos del análisis:</div>
-        <div class="resultado-motivos" id="resultado-motivos"></div>
+    <div class="CuadroCalificacion">
+    <div class="titulo-Calificacion">
+        <h2>Evalúa nuestra plataforma del 1 al 5</h2>
+        <h2>(1 = Muy malo / 5 = Excelente)</h2>
     </div>
 
-    <div class="Recomendacion">
-        <div class="texto-recomendacion">Recomendaciones:</div>
-        <div class="resultado-recomendacion" id="resultado-recomendacion"></div>
-    </div>
+    <form id="form-evaluacion">
+        <div class="Primera-pregunta">
+        <p>¿Qué tan satisfecho/a estás con la plataforma en general?</p>
+        <div class="star-rating">
+            <input type="radio" name="pregunta1" id="5-stars1" value="5"><label for="5-stars1">★</label>
+            <input type="radio" name="pregunta1" id="4-stars1" value="4"><label for="4-stars1">★</label>
+            <input type="radio" name="pregunta1" id="3-stars1" value="3"><label for="3-stars1">★</label>
+            <input type="radio" name="pregunta1" id="2-stars1" value="2"><label for="2-stars1">★</label>
+            <input type="radio" name="pregunta1" id="1-star1" value="1"><label for="1-star1">★</label>
+        </div>
+        </div>
 
+        <div class="Segunda-pregunta">
+        <p>¿Qué tan fácil te pareció usar la plataforma?</p>
+        <div class="star-rating">
+            <input type="radio" name="pregunta2" id="5-stars2" value="5"><label for="5-stars2">★</label>
+            <input type="radio" name="pregunta2" id="4-stars2" value="4"><label for="4-stars2">★</label>
+            <input type="radio" name="pregunta2" id="3-stars2" value="3"><label for="3-stars2">★</label>
+            <input type="radio" name="pregunta2" id="2-stars2" value="2"><label for="2-stars2">★</label>
+            <input type="radio" name="pregunta2" id="1-star2" value="1"><label for="1-star2">★</label>
+        </div>
+        </div>
+
+        <div class="Tercera-pregunta">
+        <p>¿Qué tan cómodo/a te sentiste durante el uso de la plataforma?</p>
+        <div class="star-rating">
+            <input type="radio" name="pregunta3" id="5-stars3" value="5"><label for="5-stars3">★</label>
+            <input type="radio" name="pregunta3" id="4-stars3" value="4"><label for="4-stars3">★</label>
+            <input type="radio" name="pregunta3" id="3-stars3" value="3"><label for="3-stars3">★</label>
+            <input type="radio" name="pregunta3" id="2-stars3" value="2"><label for="2-stars3">★</label>
+            <input type="radio" name="pregunta3" id="1-star3" value="1"><label for="1-star3">★</label>
+        </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+        <button type="submit">Enviar evaluación</button>
+        </div>
+    </form>
 </div>
 
+
+
+<script>
+    document.getElementById("form-evaluacion").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const form = new FormData(e.target);
+            const p1 = form.get("pregunta1");
+            const p2 = form.get("pregunta2");
+            const p3 = form.get("pregunta3");
+
+            if (!p1 || !p2 || !p3) {
+                alert("Por favor responde todas las preguntas.");
+                return;
+            }
+
+            fetch("http://127.0.0.1:8000/guardar-calificacion", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    pregunta1: parseInt(p1),
+                    pregunta2: parseInt(p2),
+                    pregunta3: parseInt(p3)
+                })
+            })
+            .then(res => res.json())
+            .then(data => {
+                alert("Gracias por tu evaluación.");
+            })
+            .catch(err => {
+                console.error("Error:", err);
+                alert("Hubo un problema al enviar tu evaluación.");
+            });
+        });
+</script>
 
 </body>
 </html>
